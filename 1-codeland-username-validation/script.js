@@ -16,18 +16,15 @@ function CodelandUsernameValidation(str) {
     var n = str.length;
     if(str[n-1] ==='_' || n<4 || n>25 || !(/^[a-zA-Z()]+$/.test(str[0]))) {
       return false; 
-    }
-    else{  
+    }else{  
       return /^[a-zA-Z()]+$/.test(str) || isNaN(str);
-    }
-    
-  }
+    }    
+}
 
   function testForm(){
     var str = document.querySelector('#text').value;
     document.querySelector("#result").innerHTML= CodelandUsernameValidation(str);
+    console.log(CodelandUsernameValidation(str));
   }
      
-  // keep this function call here 
-console.log(CodelandUsernameValidation("aaaa"));
 
