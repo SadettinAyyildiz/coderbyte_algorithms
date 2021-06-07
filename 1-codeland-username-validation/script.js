@@ -18,12 +18,16 @@ function CodelandUsernameValidation(str) {
       return false; 
     }
     else{  
-      return /^[a-zA-Z()]+$/.test(str) || isNaN(str) 
+      return /^[a-zA-Z()]+$/.test(str) || isNaN(str);
     }
     
+  }
+
+  function testForm(){
+    var str = document.querySelector('#text').value;
+    document.querySelector("#result").innerHTML= CodelandUsernameValidation(str);
   }
      
   // keep this function call here 
 console.log(CodelandUsernameValidation("aaaa"));
 
-document.querySelector("#result").innerHTML= CodelandUsernameValidation("aaa_")
